@@ -20,16 +20,13 @@ class Telefone {
   
 
   //*Passo 1 da desserialização
-  factory Telefone.fromJson(String json) {
-    final jsonMap = jsonDecode(json);
-    return Telefone.fromMap(jsonMap);
-  }
+  factory Telefone.fromJson(String json) => Telefone.fromMap(jsonDecode(json));
 
   //*Passo 2 da desserialização
   factory Telefone.fromMap(Map<String, dynamic> map) {
     return Telefone(
-      map['ddd'],
-      map['numero'],
+      map['ddd'] ?? 0,
+      map['numero'] ?? '',
     );
   }
 }
