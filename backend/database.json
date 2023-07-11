@@ -86,7 +86,7 @@
                     },
                     "telefone": {
                         "ddd": 51,
-                        "telefone": "98765432"
+                        "numero": "98765432"
                     }
                 }
             ]
@@ -94,7 +94,6 @@
         {
             "id": 1,
             "nome": "Rodrigo Rahman",
-            "idade": 41,
             "nomeCursos": [
                 "Academia do Flutter"
             ],
