@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
 import '../models/aluno.dart';
 
@@ -15,7 +14,7 @@ class AlunoRepository {
     //*return alunosList.map<Aluno>((alunoMap) => Aluno.fromMap(alunoMap)).toList();
   }
 
-  Future<Aluno> buscarAlunoPorId() async {
+  Future<Aluno> buscarAlunoPorId(int id) async {
     final alunosResponse = await http.get(Uri.parse('http://localhost:8080/alunos'));
     return Aluno.fromJson(alunosResponse.body);
   }

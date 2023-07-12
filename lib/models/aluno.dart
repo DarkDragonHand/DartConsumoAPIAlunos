@@ -1,8 +1,6 @@
 import 'dart:convert';
-
-import 'curso.dart';
 import 'package:consumo_api_alunos/models/endereco.dart';
-
+import 'curso.dart';
 class Aluno {
   int id;
   String nome;
@@ -37,9 +35,15 @@ class Aluno {
         map['nome'] ?? '',
         map['idade'] ?? 0, 
         List<String>.from(map['nomeCursos'] ?? <String>[]).toList(),
-        (map['cursos'] as List).map<Curso>((curso) => Curso.fromMap(curso)).toList(),
-        //List<Curso>.from(map['cursos'] ?? <Curso>[]).toList(),
+        map['cursos']
+        .map<Curso>((cursoMap) => Curso.fromMap(cursoMap))
+        .toList() ?? <Curso>[],
         Endereco.fromMap(map['endereco'] ?? <String, dynamic>{}),
       );
     }
+
+  @override
+  String toString() {
+    return 'Aluno(id: $id, nome: $nome)';
+  }
 }
