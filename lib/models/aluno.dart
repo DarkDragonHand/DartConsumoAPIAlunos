@@ -36,9 +36,9 @@ class Aluno {
         map['id'] ?? 0, 
         map['nome'] ?? '',
         map['idade'] ?? 0, 
-        List<String>.from(map['nomeCursos'] ?? <String>[]),
-        //map['nomeCursos'].cast<String>(),
-        List<Curso>.from(map['cursos'] ?? <Curso>[]),
+        List<String>.from(map['nomeCursos'] ?? <String>[]).toList(),
+        (map['cursos'] as List).map<Curso>((curso) => Curso.fromMap(curso)).toList(),
+        //List<Curso>.from(map['cursos'] ?? <Curso>[]).toList(),
         Endereco.fromMap(map['endereco'] ?? <String, dynamic>{}),
       );
     }
