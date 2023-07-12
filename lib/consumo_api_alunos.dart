@@ -5,7 +5,7 @@ Future<void> main() async {
   final alunos = await alunoRepository.buscarTodos();
   print(alunos);
 
-  final aluno = await alunoRepository.buscarAlunoPorId(1);
+  final aluno = await alunoRepository.buscarAlunoPorId(0);
   print(aluno);
   print(aluno.nomeCursos);
   print('Cursos ADF');

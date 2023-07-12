@@ -75,21 +75,19 @@
                     "isAluno": false
                 }
             ],
-            "endereco": [
-                {
-                    "rua": "Rua X",
-                    "numero": 200,
-                    "CEP": "96640000",
-                    "cidade": {
-                        "id": 1,
-                        "nome": "Rio Pardo"
-                    },
-                    "telefone": {
-                        "ddd": 51,
-                        "numero": "98765432"
-                    }
+            "endereco": {
+                "rua": "Rua X",
+                "numero": 200,
+                "CEP": "96640000",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Rio Pardo"
+                },
+                "telefone": {
+                    "ddd": 51,
+                    "numero": "98765432"
                 }
-            ]
+            }             
         },
         {
             "id": 1,
@@ -119,21 +117,19 @@
                     "isAluno": false
                 }
             ],
-            "endereco": [
-                {
-                    "rua": "Rua Z",
-                    "numero": 202,
-                    "CEP": "96640000",
-                    "cidade": {
-                        "id": 1,
-                        "nome": "Rio Pardo"
-                    },
-                    "telefone": {
-                        "ddd": 51,
-                        "telefone": "12345678"
-                    }
+            "endereco": {
+                "rua": "Rua Z",
+                "numero": 202,
+                "CEP": "96640000",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Rio Pardo"
+                },
+                "telefone": {
+                    "ddd": 51,
+                    "telefone": "12345678"
                 }
-            ]
+            }
         }
     ]
 }

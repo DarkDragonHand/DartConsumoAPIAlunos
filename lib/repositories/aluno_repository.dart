@@ -15,7 +15,7 @@ class AlunoRepository {
   }
 
   Future<Aluno> buscarAlunoPorId(int id) async {
-    final alunosResponse = await http.get(Uri.parse('http://localhost:8080/alunos'));
+    final alunosResponse = await http.get(Uri.parse('http://localhost:8080/alunos/$id'));
     return Aluno.fromJson(alunosResponse.body);
   }
 }

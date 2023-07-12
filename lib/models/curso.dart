@@ -19,6 +19,9 @@ class Curso {
 
   factory Curso.fromJson(String json) => Curso.fromMap(jsonDecode(json));
   factory Curso.fromMap(Map<String, dynamic> map) {
-    return Curso(map['id'] ?? 0, map['nome'] ?? '', map['isAluno'] ?? false);
+    return Curso(
+      map['id'] ?? 0, 
+      map['nome'] ?? '', 
+      map['isAluno'] ?? false);
   }
 }
